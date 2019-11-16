@@ -5,7 +5,9 @@ import theme from '../../styles/theme';
 const Navbar: FunctionComponent = () => {
   return (
     <div className='container'>
-      <div className='title'>MaximeMD</div>
+      <div className='title' onClick={() => (window.location.href = '/')}>
+        <img src='/avatar.png' /> MaximeMD
+      </div>
       <div className='menu-items' />
       <div className='contact'>
         <Button type='primary'>Contact</Button>
@@ -22,6 +24,14 @@ const Navbar: FunctionComponent = () => {
           font-weight: bold;
           color: ${theme.colors.primary};
           justify-self: end;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+        .title img {
+          height: 2rem;
+          width: 2rem;
+          margin-right: 0.5rem;
         }
         .contact {
           justify-self: start;

@@ -3,7 +3,13 @@ import Navbar from '../components/Navbar/Navbar';
 import Button from '../components/Button/Button';
 import Head from 'next/head';
 import HighlightItem from '../components/HighlightItem/HighlightItem';
-import { IoMdCodeWorking, IoMdCog, IoMdPeople } from 'react-icons/io';
+import {
+  IoMdCodeWorking,
+  IoMdCog,
+  IoMdPeople,
+  IoLogoLinkedin,
+  IoLogoGithub,
+} from 'react-icons/io';
 import theme from '../styles/theme';
 
 const TestPage: NextPage = () => {
@@ -29,9 +35,29 @@ const TestPage: NextPage = () => {
           </span>
           <div className='landing-section-buttons'>
             <div className='landing-section-button-1'>
-              <Button>My work</Button>
+              <Button
+                onClick={() =>
+                  window.open('https://www.linkedin.com/in/maxmd/', '_blank')
+                }>
+                <div className='landing-section-button-content'>
+                  <IoLogoLinkedin />
+                  <span className='landing-section-button-label'>Connect</span>
+                </div>
+              </Button>
             </div>
-            <Button type='secondary'>My skills</Button>
+            <Button
+              type='secondary'
+              onClick={() =>
+                window.open(
+                  'https://github.com/maximeMD?tab=repositories',
+                  '_blank',
+                )
+              }>
+              <div className='landing-section-button-content'>
+                <IoLogoGithub />
+                <span className='landing-section-button-label'>Projects</span>
+              </div>
+            </Button>
           </div>
         </div>
         <img
@@ -58,7 +84,6 @@ const TestPage: NextPage = () => {
           high-valuable projects.
         </HighlightItem>
       </div>
-      <div className='articles-container'>hello</div>
       <style jsx>{`
         .landing-section {
           font-family: 'Roboto';
@@ -91,7 +116,13 @@ const TestPage: NextPage = () => {
         .landing-section-button-1 {
           margin-right: 0.5rem;
         }
-
+        .landing-section-button-content {
+          display: flex;
+          align-items: center;
+        }
+        .landing-section-button-label {
+          margin-left: 0.2rem;
+        }
         .highlight-container {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

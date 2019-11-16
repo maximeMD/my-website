@@ -4,12 +4,15 @@ import theme from '../../styles/theme';
 interface IButtonProps {
   type?: 'primary' | 'secondary';
   className?: HTMLAttributes<HTMLButtonElement>;
+  onClick?: () => void;
 }
 
 const Button: FunctionComponent<IButtonProps> = props => {
   return (
     <>
-      <button className={props.type + ' ' + props.className}>
+      <button
+        onClick={props.onClick}
+        className={props.type + ' ' + props.className}>
         {props.children}
       </button>
 

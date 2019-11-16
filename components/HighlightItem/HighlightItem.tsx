@@ -35,6 +35,7 @@ const HighlightItem: FunctionComponent<IHighlightItemProps> = props => {
         }
         .content {
           grid-area: content;
+          text-align: justify;
         }
       `}</style>
     </>
