@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar/Navbar';
 import Button from '../components/Button/Button';
 import Head from 'next/head';
 import HighlightItem from '../components/HighlightItem/HighlightItem';
+import { IoMdCodeWorking, IoMdCog, IoMdPeople } from 'react-icons/io';
+import theme from '../styles/theme';
 
 const TestPage: NextPage = () => {
   return (
@@ -38,22 +40,25 @@ const TestPage: NextPage = () => {
         />
       </div>
       <div className='highlight-container'>
-        <HighlightItem title='Full-stack development'>
+        <HighlightItem
+          title='Full-stack development'
+          icon={<IoMdCodeWorking />}>
           I love being involved in every layer of the development process.
           Either low-level server thread pool management of high-level css
           styles refinement, I'm in!
         </HighlightItem>
-        <HighlightItem title='DevOps culture'>
+        <HighlightItem title='DevOps culture' icon={<IoMdCog />}>
           Continuous Integration and Delivery is one of the major evolutions the
           IT world has ever known. To be able to always reach a higher level of
           automation and code quality is for me a true daily challenge.
         </HighlightItem>
-        <HighlightItem title='Agile mindset'>
+        <HighlightItem title='Agile mindset' icon={<IoMdPeople />}>
           Because collaboration is a must-have in IT, I feel that having an
           agile mindset is the key to work in great conditions and release
           high-valuable projects.
         </HighlightItem>
       </div>
+      <div className='articles-container'>hello</div>
       <style jsx>{`
         .landing-section {
           font-family: 'Roboto';
@@ -72,7 +77,7 @@ const TestPage: NextPage = () => {
           grid-row-gap: 1rem;
         }
         .title-emphasis {
-          color: #4834d4;
+          color: ${theme.colors.primary};
         }
         .landing-section-illustration {
           width: 100%;

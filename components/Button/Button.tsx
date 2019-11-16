@@ -1,4 +1,5 @@
 import { FunctionComponent, ReactNode, HTMLAttributes } from 'react';
+import theme from '../../styles/theme';
 
 interface IButtonProps {
   type?: 'primary' | 'secondary';
@@ -30,7 +31,7 @@ const Button: FunctionComponent<IButtonProps> = props => {
           box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.15);
         }
         .primary {
-          background-color: #4834d4;
+          background-color: ${theme.colors.primary};
           color: white;
         }
         .primary:hover {
@@ -38,7 +39,7 @@ const Button: FunctionComponent<IButtonProps> = props => {
         }
         .secondary {
           background-color: #f2f2f2;
-          color: #4834d4;
+          color: ${theme.colors.primary};
         }
         .secondary:hover {
           background-color: #e6e6e6;

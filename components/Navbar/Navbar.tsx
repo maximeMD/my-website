@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import Button from '../Button/Button';
+import theme from '../../styles/theme';
 
 const Navbar: FunctionComponent = () => {
   return (
@@ -19,7 +20,7 @@ const Navbar: FunctionComponent = () => {
         .title {
           font-family: 'Roboto';
           font-weight: bold;
-          color: #4834d4;
+          color: ${theme.colors.primary};
           justify-self: end;
         }
         .contact {
