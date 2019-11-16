@@ -5,6 +5,8 @@ import Head from 'next/head';
 import HighlightItem from '../components/HighlightItem/HighlightItem';
 import { IoMdCodeWorking, IoMdCog, IoMdPeople } from 'react-icons/io';
 import theme from '../styles/theme';
+import Article from '../components/HomeArticles/Article/Article';
+import HomeArticles from '../components/HomeArticles/HomeArticles';
 
 const TestPage: NextPage = () => {
   return (
@@ -58,7 +60,9 @@ const TestPage: NextPage = () => {
           high-valuable projects.
         </HighlightItem>
       </div>
-      <div className='articles-container'>hello</div>
+      <div className='articles-container'>
+        <HomeArticles />
+      </div>
       <style jsx>{`
         .landing-section {
           font-family: 'Roboto';
@@ -96,6 +100,7 @@ const TestPage: NextPage = () => {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
           justify-items: center;
+          margin-bottom: 4rem;
         }
         @media screen and (max-width: 980px) {
           .highlight-container {
