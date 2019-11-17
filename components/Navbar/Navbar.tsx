@@ -10,7 +10,13 @@ const Navbar: FunctionComponent = () => {
       </div>
       <div className='menu-items' />
       <div className='contact'>
-        <Button type='primary'>Contact</Button>
+        <Button
+          type='primary'
+          onClick={() =>
+            window.open('https://www.linkedin.com/in/maxmd/', '_blank')
+          }>
+          Contact
+        </Button>
       </div>
       <style jsx>{`
         .container {
