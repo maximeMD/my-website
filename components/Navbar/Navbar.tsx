@@ -6,7 +6,7 @@ const Navbar: FunctionComponent = () => {
   return (
     <div className='container'>
       <div className='title' onClick={() => (window.location.href = '/')}>
-        <img src='/avatar.png' /> MaximeMD
+        <img src='/avatar.png' alt='My avatar' /> MaximeMD
       </div>
       <div className='menu-items' />
       <div className='contact'>

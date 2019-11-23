@@ -20,6 +20,10 @@ const TestPage: NextPage = () => {
           href='https://fonts.googleapis.com/css?family=Roboto&display=swap'
           rel='stylesheet'
         />
+        <title>MaximeMD</title>
+        <meta
+          name='Description'
+          content='I am a young software engineer, mainly interested in full stack web development'></meta>
       </Head>
       <Navbar />
       <div className='landing-section'>
@@ -63,6 +67,7 @@ const TestPage: NextPage = () => {
         <img
           className='landing-section-illustration'
           src='landing-section-illustration.svg'
+          alt='Freelance and computer'
         />
       </div>
       <div className='highlight-container'>
